@@ -6,21 +6,22 @@ import {
   View,
 } from "react-native";
 
-const Button = ({
-  children,
+const IconButton = ({
   style = {},
-  beforeIcon = null,
-  afterIcon = null,
-  backgroundColor = "#51087E",
-  color = "#ffffff",
+  size = 42,
+  backgroundColor = "#FEF7FE",
+  icon = null,
   ...props
 }) => {
   return (
     <TouchableOpacity style={[{ width: "100%" }, style]} {...props}>
-      <View style={[styles.button, { backgroundColor }]}>
-        {beforeIcon}
-        <Text style={[styles.buttonText, { color }]}>{children}</Text>
-        {afterIcon}
+      <View
+        style={[
+          styles.button,
+          { width: size, height: size, backgroundColor, borderRadius: size },
+        ]}
+      >
+        {icon}
       </View>
     </TouchableOpacity>
   );
@@ -29,7 +30,6 @@ const Button = ({
 const styles = StyleSheet.create({
   button: {
     flex: 0,
-    flexGrow: 2,
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
@@ -38,13 +38,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#51087E",
     borderRadius: 6,
   },
-  buttonText: {
-    color: "#fff",
-    fontSize: 16,
-    fontFamily: "Work Sans",
-    marginLeft: 8,
-    marginRight: 8,
-  },
 });
 
-export default Button;
+export default IconButton;

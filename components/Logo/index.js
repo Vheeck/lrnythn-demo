@@ -1,7 +1,7 @@
 import { Image } from "react-native";
 
 // import { SvgXml } from "react-native-svg";
-const logo = require("../../assets/logo.svg");
+const logo = require("../../assets/icon.png");
 
 const Logo = (props) => {
   return (
@@ -17,7 +17,7 @@ const Logo = (props) => {
     // `}
     //   {...props}
     // />
-    <Image source={logo} />
+    <Image source={logo} style={{ width: 57, height: 57 }} />
   );
 };
 
