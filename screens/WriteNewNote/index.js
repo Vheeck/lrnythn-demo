@@ -15,7 +15,7 @@ const WriteNewNoteScreen = ({ navigation }) => {
         alwaysBounceVertical={true}
         automaticallyAdjustKeyboardInsets={true}
       >
-        <View style={authStyles.container}>
+        <View style={[authStyles.container, { justifyContent: "flex-start" }]}>
           <Header back={goBack} />
           <NewNoteForm />
         </View>

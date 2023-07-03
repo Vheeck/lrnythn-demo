@@ -11,7 +11,7 @@ import {
 const NewNoteForm = () => {
   const richText = useRef();
   return (
-    <View>
+    <View style={{ flex: 0, marginTop: 28 }}>
       <Input
         placeholder="Untitled"
         style={{
@@ -21,6 +21,7 @@ const NewNoteForm = () => {
           borderRadius: 0,
           padding: 0,
           borderColor: "#ECEEF0",
+          marginBottom: 12,
         }}
         fieldStyle={{ fontSize: 20, fontFamily: "Work Sans 600" }}
         placeholderTextColor="#737373"
@@ -28,10 +29,11 @@ const NewNoteForm = () => {
       <RichEditor
         ref={richText}
         // onChange={richTextHandle}
-        placeholder="Write your cool content here :)"
+        placeholder="This is where your note goes. Start typing..."
         androidHardwareAccelerationDisabled={true}
         // style={styles.richTextEditorStyle}
-        initialHeight={250}
+        initialHeight={360}
+        style={{ height: 360 }}
       />
       <RichToolbar
         editor={richText}

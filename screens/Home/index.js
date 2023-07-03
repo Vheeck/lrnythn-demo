@@ -28,7 +28,7 @@ const HomeScreen = ({ navigation }) => {
       <Header />
       <SearchBar />
       <TabNav />
-      <BottomNav open={() => setNewNoteModal(true)} />
+      <BottomNav navigate={navigate} open={() => setNewNoteModal(true)} />
       <NewNoteModal
         navigate={navigate}
         visible={newNoteModal}

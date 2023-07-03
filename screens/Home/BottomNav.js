@@ -7,7 +7,7 @@ import {
 } from "iconsax-react-native";
 import { Dimensions, TouchableOpacity, View } from "react-native";
 
-const BottomNav = ({ open }) => {
+const BottomNav = ({ open, navigate }) => {
   const { width, height } = Dimensions.get("window");
 
   return (
@@ -28,7 +28,7 @@ const BottomNav = ({ open }) => {
       <TouchableOpacity>
         <Home size={22} variant="Bulk" color="#51087E" />
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigate("Hub")}>
         <Note size={22} variant="Linear" color="#737373" />
       </TouchableOpacity>
       <TouchableOpacity onPress={open}>
