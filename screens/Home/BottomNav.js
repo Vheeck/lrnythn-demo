@@ -37,7 +37,7 @@ const BottomNav = ({ open, navigate }) => {
       <TouchableOpacity>
         <Calendar size={22} variant="Linear" color="#737373" />
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigate("New Screen")}>
         <Setting2 size={22} variant="Linear" color="#737373" />
       </TouchableOpacity>
     </View>

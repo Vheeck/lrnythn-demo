@@ -12,6 +12,7 @@ import LoginScreen from "./screens/Login";
 import WriteNewNoteScreen from "./screens/WriteNewNote";
 import ScanNoteScreen from "./screens/ScanNote";
 import HubScreen from "./screens/Hub";
+import NewScreenScreen from "./screens/NewScreen";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -60,6 +61,10 @@ export default function App() {
             <Stack.Screen
               name="Hub"
               component={HubScreen}
+            />
+            <Stack.Screen
+              name="New Screen"
+              component={NewScreenScreen}
             />
           </Stack.Navigator>
         </NavigationContainer>
