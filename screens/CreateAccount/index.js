@@ -25,6 +25,7 @@ import {
 } from "iconsax-react-native";
 import IconButton from "../../components/IconButton";
 import authStyles from "../../styles/authStyles";
+import Hr from "../../components/Hr";
 
 const PasswordView = ({ shown, ...props }) =>
   shown ? <Eye {...props} /> : <EyeSlash {...props} />;
@@ -133,14 +134,14 @@ const CreateAccountScreen = ({ navigation }) => {
             Create Account
           </Button>
           <View style={{ flexDirection: "row", alignItems: "center" }}>
-            <View style={authStyles.hr} />
+            <Hr />
             <Typography
               style={{ marginLeft: 8, marginRight: 8 }}
               color="#737373"
             >
               Or sign up with
             </Typography>
-            <View style={authStyles.hr} />
+            <Hr />
           </View>
           <View
             style={{

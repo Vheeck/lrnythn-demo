@@ -13,6 +13,9 @@ import WriteNewNoteScreen from "./screens/WriteNewNote";
 import ScanNoteScreen from "./screens/ScanNote";
 import HubScreen from "./screens/Hub";
 import NewScreenScreen from "./screens/NewScreen";
+import NotesScreen from "./screens/Notes";
+import NoteScreen from "./screens/Note";
+import MemorizeQuotesScreen from "./screens/MemorizeQuotes";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -46,26 +49,17 @@ export default function App() {
               component={CreateAccountScreen}
             />
             <Stack.Screen name="Login" component={LoginScreen} />
-            <Stack.Screen
-              name="Home"
-              component={HomeScreen}
-            />
+            <Stack.Screen name="Home" component={HomeScreen} />
             <Stack.Screen
               name="Write New Note"
               component={WriteNewNoteScreen}
             />
-            <Stack.Screen
-              name="Scan Note"
-              component={ScanNoteScreen}
-            />
-            <Stack.Screen
-              name="Hub"
-              component={HubScreen}
-            />
-            <Stack.Screen
-              name="New Screen"
-              component={NewScreenScreen}
-            />
+            <Stack.Screen name="Scan Note" component={ScanNoteScreen} />
+            <Stack.Screen name="Hub" component={HubScreen} />
+            <Stack.Screen name="New Screen" component={NewScreenScreen} />
+            <Stack.Screen name="Notes" component={NotesScreen} />
+            <Stack.Screen name="Note" component={NoteScreen} />
+            <Stack.Screen name="Memorize Quotes" component={MemorizeQuotesScreen} />
           </Stack.Navigator>
         </NavigationContainer>
       </View>

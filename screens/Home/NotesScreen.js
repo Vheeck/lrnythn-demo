@@ -130,7 +130,9 @@ const data = [
   },
 ];
 
-const NotesScreen = () => {
+const NotesScreen = ({ navigation }) => {
+  const { navigate } = navigation;
+
   return (
     <ScrollView
       alwaysBounceVertical={true}
@@ -143,7 +145,7 @@ const NotesScreen = () => {
           paddingRight: 16,
         }}
       >
-        <NoteList data={data} />
+        <NoteList openNote={() => navigate("Note")} data={data} />
       </View>
     </ScrollView>
   );

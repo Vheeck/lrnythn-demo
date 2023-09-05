@@ -1,7 +1,7 @@
 import { View } from "react-native";
 import NoteItem from "./NoteItem";
 
-const NoteList = ({ data }) => {
+const NoteList = ({ openNote, data }) => {
   return (
     <View>
       {data.map(({ title, content, date }, i) => {
@@ -11,6 +11,7 @@ const NoteList = ({ data }) => {
             content={content}
             date={new Date(date)}
             key={i}
+            openNote={openNote}
           />
         );
       })}

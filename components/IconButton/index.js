@@ -14,11 +14,12 @@ const IconButton = ({
   ...props
 }) => {
   return (
-    <TouchableOpacity style={[{ width: "100%" }, style]} {...props}>
+    <TouchableOpacity style={{ width: "100%" }} {...props}>
       <View
         style={[
           styles.button,
           { width: size, height: size, backgroundColor, borderRadius: size },
+          style,
         ]}
       >
         {icon}

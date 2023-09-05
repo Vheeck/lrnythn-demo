@@ -3,8 +3,12 @@ import Typography from "../../components/Typography";
 import IconButton from "../../components/IconButton";
 import { Notification, SearchNormal1 } from "iconsax-react-native";
 
-const Header = () => {
+const HomeHeader = ({ color }) => {
   const { width, height } = Dimensions.get("window");
+
+  const textColor = color === "white" ? "#ffffff" : "#1A1A1A";
+  const iconColor = color === "white" ? "#ffffff" : "#51087E";
+  const iconBgColor = "rgba(255, 255, 255, 0.2)";
 
   return (
     <View
@@ -25,14 +29,15 @@ const Header = () => {
           source={require("../../assets/user.png")}
         />
         <View style={{ flexDirection: "row", margin: 8 }}>
-          <Typography size={15} color="#1A1A1A" style={{}}>
+          <Typography size={15} color={textColor} style={{}}>
             Hey,{" "}
           </Typography>
-          <Typography size={15} medium color="#1A1A1A" style={{}}>
+          <Typography size={15} medium color={textColor} style={{}}>
             Isabel!
           </Typography>
-          <Typography size={15} color="#1A1A1A" style={{}}>
-          {" "}👋🏻
+          <Typography size={15} color={textColor} style={{}}>
+            {" "}
+            👋🏻
           </Typography>
         </View>
       </View>
@@ -40,16 +45,16 @@ const Header = () => {
         <View>
           <IconButton
             size={32}
-            backgroundColor="#F4F6F8"
-            icon={<SearchNormal1 color="#51087E" variant="Linear" size={18} />}
+            backgroundColor={iconBgColor}
+            icon={<SearchNormal1 color={iconColor} variant="Linear" size={18} />}
           />
         </View>
         <View>
           <IconButton
             size={32}
-            backgroundColor="#F4F6F8"
+            backgroundColor={iconBgColor}
             style={{ marginLeft: 12 }}
-            icon={<Notification color="#51087E" variant="Bold" size={18} />}
+            icon={<Notification color={iconColor} variant="Bold" size={18} />}
           />
         </View>
       </View>
@@ -57,4 +62,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HomeHeader;

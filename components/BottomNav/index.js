@@ -23,18 +23,19 @@ const BottomNav = ({ open, navigate }) => {
         paddingTop: 8,
         paddingBottom: 8,
         padding: 16,
+        backgroundColor: "#FFFFFF",
       }}
     >
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigate("Hub")}>
         <Home size={22} variant="Bulk" color="#51087E" />
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigate("Hub")}>
+      <TouchableOpacity onPress={() => navigate("Notes")}>
         <Note size={22} variant="Linear" color="#737373" />
       </TouchableOpacity>
       <TouchableOpacity onPress={open}>
         <AddCircle size={36} variant="Bold" color="#51087E" />
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigate("Hub")}>
         <Calendar size={22} variant="Linear" color="#737373" />
       </TouchableOpacity>
       <TouchableOpacity onPress={() => navigate("New Screen")}>
