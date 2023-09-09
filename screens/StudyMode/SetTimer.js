@@ -19,9 +19,18 @@ const SetTimer = ({ time, handleChange, startCountdown }) => {
           flex: 0,
           marginTop: 8,
           height: height - 61 - 40 - 40 - 38 - StatusBar.currentHeight - 20,
+          // alignItems: "center",
+          // justifyContent: "center",
         }}
       >
-        <View style={{ flex: 0, flexDirection: "row", marginTop: 40 }}>
+        <View
+          style={{
+            flex: 0,
+            flexDirection: "row",
+            marginTop: 40,
+            marginBottom: 72,
+          }}
+        >
           <View style={{ width: width / 3 }}>
             <Typography
               style={{ textAlign: "center" }}
