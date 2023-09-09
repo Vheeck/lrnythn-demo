@@ -36,20 +36,20 @@ const MemorizeQuotesScreen = ({ navigation }) => {
 
   return (
     <>
-      <View style={authStyles.container}>
+      <View style={[authStyles.container, { paddingTop: 0 }]}>
         <LinearGradient
           colors={["#280055", "#3C0469", "#560D83"]}
           style={{
+            // flex: 1,
             width,
             height,
-            marginTop: -5,
-            // overflow: "hidden",
+            paddingTop: 38,
           }}
         >
           <View
             style={{
-              flex: 1,
-              flexDirection: "column",
+              // flex: 1,
+              // flexDirection: "column",
               height,
             }}
           >
@@ -70,10 +70,10 @@ const MemorizeQuotesScreen = ({ navigation }) => {
             </View>
             <View
               style={{
-                flex: 0,
+                flex: 1,
                 marginTop: 8,
-                height:
-                  height - 61 - 40 - 40 - 40 - 40 - StatusBar.currentHeight - 20,
+                // height:
+                // height - 61 - 40 - 40 - 40 - 40 - 40 - StatusBar.currentHeight - 20,
               }}
             >
               <ScrollView
@@ -116,55 +116,57 @@ const MemorizeQuotesScreen = ({ navigation }) => {
                   </Card>
                 </View>
               </ScrollView>
-            </View>
-            <View style={{ margin: 16 }}>
-              <Typography
-                size={14}
-                color={"#FFFFFF"}
-                style={{ textAlign: "center" }}
+            <View>
+              <View style={{ margin: 16 }}>
+                <Typography
+                  size={14}
+                  color={"#FFFFFF"}
+                  style={{ textAlign: "center" }}
+                >
+                  Do you remember this?
+                </Typography>
+              </View>
+              <View
+                style={{
+                  // position: "absolute",
+                  // zIndex: 1,
+                  // bottom: 66 + 38,
+                  flex: 0,
+                  flexDirection: "row",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  marginBottom: 88,
+                }}
               >
-                Do you remember this?
-              </Typography>
+                <View>
+                  <Button
+                    backgroundColor="#671E94"
+                    style={{
+                      width: (width - 42) / 2,
+                      borderWidth: 1,
+                      borderRadius: 6,
+                      borderColor: "#7B39A8",
+                      marginRight: 10,
+                    }}
+                    beforeIcon={<CloseCircle color="#ffffff" />}
+                  >
+                    No
+                  </Button>
+                </View>
+                <View>
+                  <Button
+                    backgroundColor="#F5E4FF"
+                    color="#4D0A7A"
+                    style={{
+                      width: (width - 42) / 2,
+                    }}
+                    beforeIcon={<TickCircle color="#4D0A7A" />}
+                  >
+                    Yes
+                  </Button>
+                </View>
+              </View>
             </View>
-            <View
-              style={{
-                // position: "absolute",
-                // zIndex: 1,
-                // bottom: 66 + 38,
-                flex: 0,
-                flexDirection: "row",
-                justifyContent: "center",
-                alignItems: "center",
-                marginBottom: 88,
-              }}
-            >
-              <View>
-                <Button
-                  backgroundColor="#671E94"
-                  style={{
-                    width: (width - 42) / 2,
-                    borderWidth: 1,
-                    borderRadius: 6,
-                    borderColor: "#7B39A8",
-                    marginRight: 10,
-                  }}
-                  beforeIcon={<CloseCircle color="#ffffff" />}
-                >
-                  No
-                </Button>
-              </View>
-              <View>
-                <Button
-                  backgroundColor="#F5E4FF"
-                  color="#4D0A7A"
-                  style={{
-                    width: (width - 42) / 2,
-                  }}
-                  beforeIcon={<TickCircle color="#4D0A7A" />}
-                >
-                  Yes
-                </Button>
-              </View>
             </View>
           </View>
         </LinearGradient>

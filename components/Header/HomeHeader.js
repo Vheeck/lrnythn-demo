@@ -14,7 +14,7 @@ const HomeHeader = ({ color }) => {
     <View
       style={{
         width,
-        height: 32,
+        // height: 32,
         flex: 0,
         flexDirection: "row",
         alignItems: "center",

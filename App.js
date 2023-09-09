@@ -16,6 +16,8 @@ import NewScreenScreen from "./screens/NewScreen";
 import NotesScreen from "./screens/Notes";
 import NoteScreen from "./screens/Note";
 import MemorizeQuotesScreen from "./screens/MemorizeQuotes";
+import ScheduleScreen from "./screens/Schedule";
+import StudyModeScreen from "./screens/StudyMode";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -60,6 +62,8 @@ export default function App() {
             <Stack.Screen name="Notes" component={NotesScreen} />
             <Stack.Screen name="Note" component={NoteScreen} />
             <Stack.Screen name="Memorize Quotes" component={MemorizeQuotesScreen} />
+            <Stack.Screen name="Schedule" component={ScheduleScreen} />
+            <Stack.Screen name="Study Mode" component={StudyModeScreen} />
           </Stack.Navigator>
         </NavigationContainer>
       </View>

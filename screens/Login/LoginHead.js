@@ -1,8 +1,11 @@
-import { View } from "react-native";
+import { Dimensions, View } from "react-native";
 import Logo from "../../components/Logo";
 import Typography from "../../components/Typography";
 
 const LoginHead = () => {
+
+  const { width, height } = Dimensions.get("screen");
+
   return (
     <>
       <View style={{ alignItems: "center" }}>
@@ -18,7 +21,7 @@ const LoginHead = () => {
               lineHeight: 33,
               textAlign: "center",
               margin: 4,
-              width: 210,
+              width: width * 3 / 5,
             }}
           >
             Welcome back, Isabel!
@@ -28,8 +31,7 @@ const LoginHead = () => {
             size={14}
             style={{
               textAlign: "center",
-              paddingLeft: 104,
-              paddingRight: 104,
+              width: width / 2,
               margin: 4,
             }}
           >

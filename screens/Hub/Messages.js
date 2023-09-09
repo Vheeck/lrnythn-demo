@@ -36,6 +36,7 @@ const Messages = ({ conversation, userId }) => {
               <Poll
                 {...message}
                 username={message.sentBy === userId ? "You" : message.username}
+                key={i}
               />
             ) : message.sentBy === userId ? (
               <SentMessage key={i} {...message} />

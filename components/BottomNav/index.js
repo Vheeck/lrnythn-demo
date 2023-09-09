@@ -26,7 +26,7 @@ const BottomNav = ({ open, navigate }) => {
         backgroundColor: "#FFFFFF",
       }}
     >
-      <TouchableOpacity onPress={() => navigate("Hub")}>
+      <TouchableOpacity onPress={() => navigate("Study Mode")}>
         <Home size={22} variant="Bulk" color="#51087E" />
       </TouchableOpacity>
       <TouchableOpacity onPress={() => navigate("Notes")}>
@@ -35,10 +35,10 @@ const BottomNav = ({ open, navigate }) => {
       <TouchableOpacity onPress={open}>
         <AddCircle size={36} variant="Bold" color="#51087E" />
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigate("Hub")}>
+      <TouchableOpacity onPress={() => navigate("Schedule")}>
         <Calendar size={22} variant="Linear" color="#737373" />
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigate("New Screen")}>
+      <TouchableOpacity onPress={() => navigate("Hub")}>
         <Setting2 size={22} variant="Linear" color="#737373" />
       </TouchableOpacity>
     </View>

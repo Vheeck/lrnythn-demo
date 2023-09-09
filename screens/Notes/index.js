@@ -89,16 +89,12 @@ const NotesScreen = ({ navigation }) => {
         alwaysBounceVertical={true}
         automaticallyAdjustKeyboardInsets={true}
       >
-        <View style={authStyles.container}>
-          <View
-            style={{
-              marginTop: -5,
-            }}
-          >
+        <View style={[authStyles.container, { paddingTop: 0 }]}>
+          <View>
             <LinearGradient
               colors={["#51087E", "#2F005C"]}
               style={{
-                // paddingBottom: -50,
+                paddingTop: 38,
                 borderBottomLeftRadius: 20,
                 borderBottomRightRadius: 20,
                 overflow: "hidden",
@@ -230,7 +226,7 @@ const NotesScreen = ({ navigation }) => {
               >
                 Most Recent
               </Typography>
-              <View style={{ marginBottom: 24 }}>
+              <View style={{ marginBottom: 0 }}>
                 <ModuleTestList data={moduleTestsData} />
               </View>
             </View>

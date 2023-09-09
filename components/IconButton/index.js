@@ -14,7 +14,7 @@ const IconButton = ({
   ...props
 }) => {
   return (
-    <TouchableOpacity style={{ width: "100%" }} {...props}>
+    <TouchableOpacity style={{ flex: 0 }} {...props}>
       <View
         style={[
           styles.button,

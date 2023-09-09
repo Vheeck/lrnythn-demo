@@ -53,13 +53,14 @@ const NoteScreen = ({ navigation }) => {
 
   return (
     <>
-      <View style={authStyles.container}>
+      <View style={[authStyles.container, { paddingTop: 0 }]}>
         <LinearGradient
           colors={["#280055", "#3C0469", "#560D83"]}
           style={{
             width,
             height,
-            marginTop: -5,
+            paddingTop: 38,
+            // marginTop: -5,
             // overflow: "hidden",
           }}
         >
@@ -72,7 +73,7 @@ const NoteScreen = ({ navigation }) => {
             }}
           >
             <View>
-              <PlainHeader title="Memorize" color="white" goBack={goBack} />
+              <PlainHeader title="Go Back" color="white" goBack={goBack} />
               <View>
                 <View
                   style={{
@@ -101,7 +102,7 @@ const NoteScreen = ({ navigation }) => {
               style={{
                 flex: 0,
                 marginTop: 8,
-                height: height - 61 - 40 - 40 - StatusBar.currentHeight - 20,
+                height: height - 61 - 40 - 40 - 38 - StatusBar.currentHeight - 20,
               }}
             >
               <ScrollView
@@ -310,7 +311,7 @@ const NoteScreen = ({ navigation }) => {
               <ProgressBar
                 currentAmount={scrollHeight}
                 targetAmount={contentHeight - frameHeight}
-                // percentage={10}
+              // percentage={10}
               />
             </View>
           </View>

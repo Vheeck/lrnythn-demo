@@ -41,7 +41,7 @@ const CreateAccountScreen = ({ navigation }) => {
   return (
     <>
       <ScrollView
-        contentContainerStyle={{ width, height }}
+        contentContainerStyle={{ width, minHeight: height }}
         alwaysBounceVertical={true}
         automaticallyAdjustKeyboardInsets={true}
       >
@@ -49,7 +49,7 @@ const CreateAccountScreen = ({ navigation }) => {
           <View style={{ margin: 33 }}>
             <Logo />
           </View>
-          <View style={{ flex: 1, alignItems: "center", paddingBottom: 30 }}>
+          <View style={{ flex: 0, alignItems: "center", paddingBottom: 30 }}>
             <Typography
               color="#1A1A1A"
               size={28}
@@ -57,8 +57,9 @@ const CreateAccountScreen = ({ navigation }) => {
               style={{
                 lineHeight: 33,
                 textAlign: "center",
+                width: width * 3 / 5,
                 margin: 4,
-                width: 210,
+                // width: 210,
               }}
             >
               Create Account
@@ -68,8 +69,7 @@ const CreateAccountScreen = ({ navigation }) => {
               size={14}
               style={{
                 textAlign: "center",
-                paddingLeft: 104,
-                paddingRight: 104,
+                width: width / 2,
                 margin: 4,
               }}
             >
@@ -133,7 +133,7 @@ const CreateAccountScreen = ({ navigation }) => {
           >
             Create Account
           </Button>
-          <View style={{ flexDirection: "row", alignItems: "center" }}>
+          <View style={{ flex: 0, flexDirection: "row", alignItems: "center" }}>
             <Hr />
             <Typography
               style={{ marginLeft: 8, marginRight: 8 }}
@@ -145,10 +145,11 @@ const CreateAccountScreen = ({ navigation }) => {
           </View>
           <View
             style={{
-              flex: 1,
+              flex: 0,
               flexDirection: "row",
               justifyContent: "center",
               alignItems: "center",
+              marginVertical: 16,
             }}
           >
             <View>
@@ -176,10 +177,12 @@ const CreateAccountScreen = ({ navigation }) => {
           </View>
           <View
             style={{
-              flex: 1,
+              flex: 0,
               flexDirection: "row",
               alignItems: "center",
               justifyContent: "center",
+              // paddingBottom: 90,
+              marginTop: 24,
             }}
           >
             <Typography color="#737373">Already have an account? </Typography>

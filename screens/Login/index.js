@@ -37,7 +37,7 @@ const LoginScreen = ({ navigation }) => {
   return (
     <>
       <ScrollView
-        contentContainerStyle={{ width, height }}
+        contentContainerStyle={{ width, minHeight: height }}
         alwaysBounceVertical={true}
         automaticallyAdjustKeyboardInsets={true}
       >
